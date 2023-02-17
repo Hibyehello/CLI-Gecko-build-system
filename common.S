@@ -4,7 +4,6 @@
     dst_ ## dst ## _ ## offset:
 
 #define GECKO_C2_END(dst, offset) \
-    .byte 0x60; \ 
     .balign 8; \
     dst_end_ ## dst ## _ ## offset:
 
