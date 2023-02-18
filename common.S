@@ -4,11 +4,13 @@
     dst_ ## dst ## _ ## offset:
 
 #define GECKO_C2_END(dst, offset) \
-    .byte 0x60; \ 
-    .balign 8; \
+    .balign 8, 0; \
     dst_end_ ## dst ## _ ## offset:
 
-#define GECKO_C0() \
+#define GECKO_C0_START() \
     .byte 0xC0; \
     .byte 0x0; \
-    .balign 8;
+    .balign 8
+
+#define GECKO_C0_END() \
+    .balign 8, 0;
