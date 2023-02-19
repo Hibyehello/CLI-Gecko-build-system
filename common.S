@@ -14,3 +14,7 @@
 
 #define GECKO_C0_END() \
     .balign 8, 0;
+
+#define GECKO_04(dst, ...) \
+    .long 0x04000000 + ## dst - 0x80000000; \
+    __VA_ARGS__;
