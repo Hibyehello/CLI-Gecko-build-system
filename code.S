@@ -5,13 +5,12 @@
 ##     By WhatisLoaf      ##
 ##~~~~~~~~~~~~~~~~~~~~~~~~##
 
-.set region, "P"
-
 # 8052edf4 - RMCP
 # 8052a2ac - RMCE
 # 8052e774 - RMCJ
 # 8051ce4c - RMCK
 
+# region defined by build script
 .if(region == "P")
     .set postInitControllers, 0x8052ed28
     GECKO_04(0x80522738, nop)
