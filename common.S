@@ -18,3 +18,7 @@
 #define GECKO_04(dst, ...) \
     .long 0x04000000 + ## dst - 0x80000000; \
     __VA_ARGS__;
+
+#define GECKO_04_DATA(dst, data) \
+    .long 0x04000000 + ## dst - 0x80000000; \
+    .long data;
